@@ -1,0 +1,87 @@
+NODES
+-----
+Places:
+  source 1    (place; id: n1)
+  sink 2    (place; id: n2)
+  sink 3    (place; id: n3)
+  sink 4    (place; id: n4)
+  source 5    (place; id: n5)
+  sink 6    (place; id: n6)
+  source 7    (place; id: n7)
+  sink 8    (place; id: n8)
+  source 9    (place; id: n9)
+  sink 10    (place; id: n10)
+  sink 11    (place; id: n11)
+  sink 12    (place; id: n12)
+  sink 13    (place; id: n13)
+
+Transitions:
+  Gather Ingredients    (transition; id: n14)
+  Preheat Oven    (transition; id: n17)
+  Choose Flavor - Chocolate    (transition; id: n18)
+  Choose Flavor - Vanilla    (transition; id: n19)
+  Mix Batter    (transition; id: n20)
+  Pour Batter    (transition; id: n21)
+  Bake Cake    (transition; id: n22)
+  Cool Cake    (transition; id: n23)
+  Decorate Cake    (transition; id: n24)
+  Split1    (logical transition; derived from invisible 'tau split'; id: n15)
+  Join1    (logical transition; derived from invisible 'tau join'; id: n16)
+
+ARCS (source -> target)
+-----------------------
+Join1 -> sink 4
+source 7 -> Choose Flavor - Chocolate
+source 1 -> Gather Ingredients
+Decorate Cake -> sink 2
+source 9 -> Mix Batter
+source 5 -> Preheat Oven
+sink 6 -> Join1
+sink 13 -> Decorate Cake
+Split1 -> source 7
+Pour Batter -> sink 11
+source 7 -> Choose Flavor - Vanilla
+Gather Ingredients -> sink 3
+Split1 -> source 9
+sink 12 -> Cool Cake
+Mix Batter -> sink 10
+Cool Cake -> sink 13
+Preheat Oven -> sink 6
+Split1 -> source 5
+Choose Flavor - Chocolate -> sink 8
+Choose Flavor - Vanilla -> sink 8
+Bake Cake -> sink 12
+sink 11 -> Bake Cake
+sink 8 -> Join1
+sink 10 -> Join1
+sink 3 -> Split1
+sink 4 -> Pour Batter
+
+COMPACT CONNECTION LIST
+-----------------------
+Bake Cake -> sink 12
+Choose Flavor - Chocolate -> sink 8
+Choose Flavor - Vanilla -> sink 8
+Cool Cake -> sink 13
+Decorate Cake -> sink 2
+Gather Ingredients -> sink 3
+Join1 -> sink 4
+Mix Batter -> sink 10
+Pour Batter -> sink 11
+Preheat Oven -> sink 6
+Split1 -> source 5
+Split1 -> source 7
+Split1 -> source 9
+sink 10 -> Join1
+sink 11 -> Bake Cake
+sink 12 -> Cool Cake
+sink 13 -> Decorate Cake
+sink 3 -> Split1
+sink 4 -> Pour Batter
+sink 6 -> Join1
+sink 8 -> Join1
+source 1 -> Gather Ingredients
+source 5 -> Preheat Oven
+source 7 -> Choose Flavor - Chocolate
+source 7 -> Choose Flavor - Vanilla
+source 9 -> Mix Batter

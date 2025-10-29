@@ -1,0 +1,10 @@
+Simple connection list (source -> target)
+=========================================
+P_start(1) -> A
+A -> P_mid
+P_mid -> C
+C -> P_end
+
+Unconnected nodes
+-----------------
+B (transition) has no incoming/outgoing arcs

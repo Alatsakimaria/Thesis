@@ -1,0 +1,35 @@
+NODES
+-----
+Places:
+  Start    (place; id: n1)
+  End      (place; id: n2)
+  Split1   (place; logical split of A; derived from 'tau split')
+  Join1    (place; logical join before D; derived from 'tau join')
+
+Transitions:
+  A    (transition; id: n9)
+  B    (transition; id: n12)
+  C    (transition; id: n13)
+  D    (transition; id: n14)
+
+ARCS (source -> target)
+-----------------------
+Start -> A
+A -> Split1
+Split1 -> B
+Split1 -> C
+B -> Join1
+C -> Join1
+Join1 -> D
+D -> End
+
+COMPACT CONNECTION LIST
+-----------------------
+Start -> A
+A -> Split1
+Split1 -> B
+Split1 -> C
+B -> Join1
+C -> Join1
+Join1 -> D
+D -> End

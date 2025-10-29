@@ -1,0 +1,35 @@
+NODES
+-----
+Places:
+  End    (place; original name: End; id: n4)
+  Join1    (place; original name: ([B, C],[D]); id: n2)
+  Split1    (place; original name: ([A],[B, C]); id: n1)
+  Start    (place; original name: Start; id: n3)
+
+Transitions:
+  A    (transition; id: n5)
+  B    (transition; id: n6)
+  C    (transition; id: n7)
+  D    (transition; id: n8)
+
+ARCS (source -> target)
+-----------------------
+A -> Split1
+B -> Join1
+C -> Join1
+D -> End
+Join1 -> D
+Split1 -> B
+Split1 -> C
+Start -> A
+
+COMPACT CONNECTION LIST
+-----------------------
+A -> Split1
+B -> Join1
+C -> Join1
+D -> End
+Join1 -> D
+Split1 -> B
+Split1 -> C
+Start -> A

@@ -1,0 +1,200 @@
+NODES
+-----
+Places:
+  ([Smoothing before opening the lips],[Heating after smoothing])    (place; id: n1)
+  ([Opening the lips and smoothing],[Heating the lips])    (place; id: n2)
+  ([Opening the lips],[Flashing])    (place; id: n3)
+  ([Making an incision for lips],[Heating before opening the lips])    (place; id: n4)
+  ([Detaching the object from the blowpipe],[Putting the blowpipe away])    (place; id: n5)
+  ([Smoothing],[Constricting for discarding, Constricting the glass with a jack])    (place; id: n6)
+  ([Moving with glass at the end of the blowpipe],[Shaping the glass and preparing the mold, Shaping the glass])    (place; id: n7)
+  ([Heating the glass in the hot furnace],[Soufflé tourné, Opening the lips and smoothing])    (place; id: n8)
+  ([Moving with glass at the end of the blowpipe, Heating and passing],[Shaping the glass])    (place; id: n9)
+  ([Constricting, smoothing, choosing a punty, gathering a small quantity, shaping],[Failed Transferring, Transferring])    (place; id: n10)
+  ([Constricting the glass with a jack],[Soufflé tourné, Heating, choosing a punty, gathering and shaping])    (place; id: n11)
+  ([Constricting the glass with a jack, Shaping the glass],[Heating the glass in the hot furnace])    (place; id: n12)
+  ([Constricting the glass with a jack],[Heating the glass in the hot furnace, Heating, choosing a punty, gathering and shaping])    (place; id: n13)
+  ([Heating and passing, Heating the glass in the hot furnace],[Opening the lips and smoothing])    (place; id: n14)
+  ([Putting the blowpipe away],[Smoothing before opening the lips, Making an incision for lips, Opening the lips])    (place; id: n15)
+  ([Heating and passing],[Opening the lips and smoothing, Shaping the glass])    (place; id: n16)
+  ([Soufflé tourné],[Preparing for transferring, Smoothing, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping])    (place; id: n17)
+  ([Preparing for transferring, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping, Heating, choosing a punty, gathering and shaping],[Transferring])    (place; id: n18)
+  ([Transferring],[Heating and passing, Detaching the object from the blowpipe])    (place; id: n19)
+  ([Putting the blowpipe away, Heating after smoothing, Heating the lips, Heating before opening the lips],[Opening the lips])    (place; id: n20)
+  Start    (place; id: n21)
+  End      (place; id: n22)
+
+Transitions:
+  Choosing a blowpipe    (transition; id: n23)
+  Constricting for discarding    (transition; id: n24)
+  Constricting the glass with a jack    (transition; id: n25)
+  Constricting, smoothing, choosing a punty, gathering a small quantity, shaping    (transition; id: n26)
+  Detaching the object from the blowpipe    (transition; id: n27)
+  Failed Transferring    (transition; id: n28)
+  Flashing    (transition; id: n29)
+  Gathering glass from the melting furnace    (transition; id: n30)
+  Getting a blowpipe    (transition; id: n31)
+  Heating after smoothing    (transition; id: n32)
+  Heating and passing    (transition; id: n33)
+  Heating before opening the lips    (transition; id: n34)
+  Heating the glass in the hot furnace    (transition; id: n35)
+  Heating the lips    (transition; id: n36)
+  Heating, choosing a punty, gathering and shaping    (transition; id: n37)
+  Instilling a bubble into the glass    (transition; id: n38)
+  Making an incision for lips    (transition; id: n39)
+  Moving with glass at the end of the blowpipe    (transition; id: n40)
+  Opening the lips    (transition; id: n41)
+  Opening the lips and smoothing    (transition; id: n42)
+  Preparing for transferring    (transition; id: n43)
+  Putting the blowpipe away    (transition; id: n44)
+  Shaping the glass    (transition; id: n45)
+  Shaping the glass and preparing the mold    (transition; id: n46)
+  Smoothing    (transition; id: n47)
+  Smoothing before opening the lips    (transition; id: n48)
+  Soufflé tourné    (transition; id: n49)
+  Transferring    (transition; id: n50)
+  nan    (transition; id: n51)
+
+ARCS (source -> target)
+-----------------------
+([Putting the blowpipe away],[Smoothing before opening the lips, Making an incision for lips, Opening the lips]) -> Smoothing before opening the lips
+([Heating and passing],[Opening the lips and smoothing, Shaping the glass]) -> Shaping the glass
+Making an incision for lips -> ([Making an incision for lips],[Heating before opening the lips])
+Putting the blowpipe away -> ([Putting the blowpipe away, Heating after smoothing, Heating the lips, Heating before opening the lips],[Opening the lips])
+([Constricting the glass with a jack],[Soufflé tourné, Heating, choosing a punty, gathering and shaping]) -> Soufflé tourné
+End -> Shaping the glass and preparing the mold
+Heating before opening the lips -> ([Putting the blowpipe away, Heating after smoothing, Heating the lips, Heating before opening the lips],[Opening the lips])
+([Smoothing before opening the lips],[Heating after smoothing]) -> Heating after smoothing
+Heating and passing -> ([Heating and passing],[Opening the lips and smoothing, Shaping the glass])
+Opening the lips -> End
+([Soufflé tourné],[Preparing for transferring, Smoothing, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping]) -> Constricting, smoothing, choosing a punty, gathering a small quantity, shaping
+Flashing -> End
+Smoothing before opening the lips -> ([Smoothing before opening the lips],[Heating after smoothing])
+([Preparing for transferring, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping, Heating, choosing a punty, gathering and shaping],[Transferring]) -> Transferring
+Heating the lips -> ([Putting the blowpipe away, Heating after smoothing, Heating the lips, Heating before opening the lips],[Opening the lips])
+Constricting the glass with a jack -> ([Constricting the glass with a jack],[Soufflé tourné, Heating, choosing a punty, gathering and shaping])
+Shaping the glass -> ([Constricting the glass with a jack, Shaping the glass],[Heating the glass in the hot furnace])
+([Opening the lips],[Flashing]) -> Flashing
+([Transferring],[Heating and passing, Detaching the object from the blowpipe]) -> Detaching the object from the blowpipe
+([Constricting, smoothing, choosing a punty, gathering a small quantity, shaping],[Failed Transferring, Transferring]) -> Transferring
+([Constricting the glass with a jack],[Heating the glass in the hot furnace, Heating, choosing a punty, gathering and shaping]) -> Heating the glass in the hot furnace
+Constricting for discarding -> End
+Soufflé tourné -> ([Soufflé tourné],[Preparing for transferring, Smoothing, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping])
+([Smoothing],[Constricting for discarding, Constricting the glass with a jack]) -> Constricting for discarding
+Start -> Smoothing
+Heating after smoothing -> ([Putting the blowpipe away, Heating after smoothing, Heating the lips, Heating before opening the lips],[Opening the lips])
+Preparing for transferring -> ([Preparing for transferring, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping, Heating, choosing a punty, gathering and shaping],[Transferring])
+([Soufflé tourné],[Preparing for transferring, Smoothing, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping]) -> Preparing for transferring
+([Opening the lips and smoothing],[Heating the lips]) -> Heating the lips
+Failed Transferring -> End
+Soufflé tourné -> End
+Opening the lips -> ([Opening the lips],[Flashing])
+Constricting the glass with a jack -> ([Constricting the glass with a jack],[Heating the glass in the hot furnace, Heating, choosing a punty, gathering and shaping])
+([Making an incision for lips],[Heating before opening the lips]) -> Heating before opening the lips
+Putting the blowpipe away -> ([Putting the blowpipe away],[Smoothing before opening the lips, Making an incision for lips, Opening the lips])
+([Putting the blowpipe away, Heating after smoothing, Heating the lips, Heating before opening the lips],[Opening the lips]) -> Opening the lips
+Heating the glass in the hot furnace -> ([Heating the glass in the hot furnace],[Soufflé tourné, Opening the lips and smoothing])
+Moving with glass at the end of the blowpipe -> End
+End -> Shaping the glass
+Heating the glass in the hot furnace -> ([Heating and passing, Heating the glass in the hot furnace],[Opening the lips and smoothing])
+Constricting, smoothing, choosing a punty, gathering a small quantity, shaping -> ([Preparing for transferring, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping, Heating, choosing a punty, gathering and shaping],[Transferring])
+Constricting, smoothing, choosing a punty, gathering a small quantity, shaping -> ([Constricting, smoothing, choosing a punty, gathering a small quantity, shaping],[Failed Transferring, Transferring])
+End -> Shaping the glass
+Heating and passing -> End
+Start -> Getting a blowpipe
+([Transferring],[Heating and passing, Detaching the object from the blowpipe]) -> Heating and passing
+Detaching the object from the blowpipe -> ([Detaching the object from the blowpipe],[Putting the blowpipe away])
+Smoothing -> ([Smoothing],[Constricting for discarding, Constricting the glass with a jack])
+Heating and passing -> ([Heating and passing, Heating the glass in the hot furnace],[Opening the lips and smoothing])
+([Constricting the glass with a jack],[Soufflé tourné, Heating, choosing a punty, gathering and shaping]) -> Heating, choosing a punty, gathering and shaping
+Constricting, smoothing, choosing a punty, gathering a small quantity, shaping -> End
+Moving with glass at the end of the blowpipe -> End
+([Constricting the glass with a jack],[Heating the glass in the hot furnace, Heating, choosing a punty, gathering and shaping]) -> Heating, choosing a punty, gathering and shaping
+Start -> nan
+([Soufflé tourné],[Preparing for transferring, Smoothing, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping]) -> Smoothing
+([Detaching the object from the blowpipe],[Putting the blowpipe away]) -> Putting the blowpipe away
+([Constricting the glass with a jack, Shaping the glass],[Heating the glass in the hot furnace]) -> Heating the glass in the hot furnace
+([Smoothing],[Constricting for discarding, Constricting the glass with a jack]) -> Constricting the glass with a jack
+([Heating the glass in the hot furnace],[Soufflé tourné, Opening the lips and smoothing]) -> Opening the lips and smoothing
+Start -> Choosing a blowpipe
+Transferring -> ([Transferring],[Heating and passing, Detaching the object from the blowpipe])
+Constricting the glass with a jack -> ([Constricting the glass with a jack, Shaping the glass],[Heating the glass in the hot furnace])
+([Heating and passing],[Opening the lips and smoothing, Shaping the glass]) -> Opening the lips and smoothing
+([Heating the glass in the hot furnace],[Soufflé tourné, Opening the lips and smoothing]) -> Soufflé tourné
+([Constricting, smoothing, choosing a punty, gathering a small quantity, shaping],[Failed Transferring, Transferring]) -> Failed Transferring
+([Putting the blowpipe away],[Smoothing before opening the lips, Making an incision for lips, Opening the lips]) -> Making an incision for lips
+Heating, choosing a punty, gathering and shaping -> ([Preparing for transferring, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping, Heating, choosing a punty, gathering and shaping],[Transferring])
+([Heating and passing, Heating the glass in the hot furnace],[Opening the lips and smoothing]) -> Opening the lips and smoothing
+([Putting the blowpipe away],[Smoothing before opening the lips, Making an incision for lips, Opening the lips]) -> Opening the lips
+Opening the lips and smoothing -> ([Opening the lips and smoothing],[Heating the lips])
+
+COMPACT CONNECTION LIST
+-----------------------
+([Constricting the glass with a jack, Shaping the glass],[Heating the glass in the hot furnace]) -> Heating the glass in the hot furnace
+([Constricting the glass with a jack],[Heating the glass in the hot furnace, Heating, choosing a punty, gathering and shaping]) -> Heating the glass in the hot furnace
+([Constricting the glass with a jack],[Heating the glass in the hot furnace, Heating, choosing a punty, gathering and shaping]) -> Heating, choosing a punty, gathering and shaping
+([Constricting the glass with a jack],[Soufflé tourné, Heating, choosing a punty, gathering and shaping]) -> Heating, choosing a punty, gathering and shaping
+([Constricting the glass with a jack],[Soufflé tourné, Heating, choosing a punty, gathering and shaping]) -> Soufflé tourné
+([Constricting, smoothing, choosing a punty, gathering a small quantity, shaping],[Failed Transferring, Transferring]) -> Failed Transferring
+([Constricting, smoothing, choosing a punty, gathering a small quantity, shaping],[Failed Transferring, Transferring]) -> Transferring
+([Detaching the object from the blowpipe],[Putting the blowpipe away]) -> Putting the blowpipe away
+([Heating and passing, Heating the glass in the hot furnace],[Opening the lips and smoothing]) -> Opening the lips and smoothing
+([Heating and passing],[Opening the lips and smoothing, Shaping the glass]) -> Opening the lips and smoothing
+([Heating and passing],[Opening the lips and smoothing, Shaping the glass]) -> Shaping the glass
+([Heating the glass in the hot furnace],[Soufflé tourné, Opening the lips and smoothing]) -> Opening the lips and smoothing
+([Heating the glass in the hot furnace],[Soufflé tourné, Opening the lips and smoothing]) -> Soufflé tourné
+([Making an incision for lips],[Heating before opening the lips]) -> Heating before opening the lips
+([Opening the lips and smoothing],[Heating the lips]) -> Heating the lips
+([Opening the lips],[Flashing]) -> Flashing
+([Preparing for transferring, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping, Heating, choosing a punty, gathering and shaping],[Transferring]) -> Transferring
+([Putting the blowpipe away, Heating after smoothing, Heating the lips, Heating before opening the lips],[Opening the lips]) -> Opening the lips
+([Putting the blowpipe away],[Smoothing before opening the lips, Making an incision for lips, Opening the lips]) -> Making an incision for lips
+([Putting the blowpipe away],[Smoothing before opening the lips, Making an incision for lips, Opening the lips]) -> Opening the lips
+([Putting the blowpipe away],[Smoothing before opening the lips, Making an incision for lips, Opening the lips]) -> Smoothing before opening the lips
+([Smoothing before opening the lips],[Heating after smoothing]) -> Heating after smoothing
+([Smoothing],[Constricting for discarding, Constricting the glass with a jack]) -> Constricting for discarding
+([Smoothing],[Constricting for discarding, Constricting the glass with a jack]) -> Constricting the glass with a jack
+([Soufflé tourné],[Preparing for transferring, Smoothing, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping]) -> Constricting, smoothing, choosing a punty, gathering a small quantity, shaping
+([Soufflé tourné],[Preparing for transferring, Smoothing, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping]) -> Preparing for transferring
+([Soufflé tourné],[Preparing for transferring, Smoothing, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping]) -> Smoothing
+([Transferring],[Heating and passing, Detaching the object from the blowpipe]) -> Detaching the object from the blowpipe
+([Transferring],[Heating and passing, Detaching the object from the blowpipe]) -> Heating and passing
+Constricting for discarding -> End
+Constricting the glass with a jack -> ([Constricting the glass with a jack, Shaping the glass],[Heating the glass in the hot furnace])
+Constricting the glass with a jack -> ([Constricting the glass with a jack],[Heating the glass in the hot furnace, Heating, choosing a punty, gathering and shaping])
+Constricting the glass with a jack -> ([Constricting the glass with a jack],[Soufflé tourné, Heating, choosing a punty, gathering and shaping])
+Constricting, smoothing, choosing a punty, gathering a small quantity, shaping -> ([Constricting, smoothing, choosing a punty, gathering a small quantity, shaping],[Failed Transferring, Transferring])
+Constricting, smoothing, choosing a punty, gathering a small quantity, shaping -> ([Preparing for transferring, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping, Heating, choosing a punty, gathering and shaping],[Transferring])
+Constricting, smoothing, choosing a punty, gathering a small quantity, shaping -> End
+Detaching the object from the blowpipe -> ([Detaching the object from the blowpipe],[Putting the blowpipe away])
+End -> Shaping the glass
+End -> Shaping the glass and preparing the mold
+Failed Transferring -> End
+Flashing -> End
+Heating after smoothing -> ([Putting the blowpipe away, Heating after smoothing, Heating the lips, Heating before opening the lips],[Opening the lips])
+Heating and passing -> ([Heating and passing, Heating the glass in the hot furnace],[Opening the lips and smoothing])
+Heating and passing -> ([Heating and passing],[Opening the lips and smoothing, Shaping the glass])
+Heating and passing -> End
+Heating before opening the lips -> ([Putting the blowpipe away, Heating after smoothing, Heating the lips, Heating before opening the lips],[Opening the lips])
+Heating the glass in the hot furnace -> ([Heating and passing, Heating the glass in the hot furnace],[Opening the lips and smoothing])
+Heating the glass in the hot furnace -> ([Heating the glass in the hot furnace],[Soufflé tourné, Opening the lips and smoothing])
+Heating the lips -> ([Putting the blowpipe away, Heating after smoothing, Heating the lips, Heating before opening the lips],[Opening the lips])
+Heating, choosing a punty, gathering and shaping -> ([Preparing for transferring, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping, Heating, choosing a punty, gathering and shaping],[Transferring])
+Making an incision for lips -> ([Making an incision for lips],[Heating before opening the lips])
+Moving with glass at the end of the blowpipe -> End
+Opening the lips -> ([Opening the lips],[Flashing])
+Opening the lips -> End
+Opening the lips and smoothing -> ([Opening the lips and smoothing],[Heating the lips])
+Preparing for transferring -> ([Preparing for transferring, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping, Heating, choosing a punty, gathering and shaping],[Transferring])
+Putting the blowpipe away -> ([Putting the blowpipe away, Heating after smoothing, Heating the lips, Heating before opening the lips],[Opening the lips])
+Putting the blowpipe away -> ([Putting the blowpipe away],[Smoothing before opening the lips, Making an incision for lips, Opening the lips])
+Shaping the glass -> ([Constricting the glass with a jack, Shaping the glass],[Heating the glass in the hot furnace])
+Smoothing -> ([Smoothing],[Constricting for discarding, Constricting the glass with a jack])
+Smoothing before opening the lips -> ([Smoothing before opening the lips],[Heating after smoothing])
+Soufflé tourné -> ([Soufflé tourné],[Preparing for transferring, Smoothing, Constricting, smoothing, choosing a punty, gathering a small quantity, shaping])
+Soufflé tourné -> End
+Start -> Choosing a blowpipe
+Start -> Getting a blowpipe
+Start -> Smoothing
+Start -> nan
+Transferring -> ([Transferring],[Heating and passing, Detaching the object from the blowpipe])

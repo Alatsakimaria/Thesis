@@ -1,0 +1,60 @@
+NODES
+-----
+Places:
+  ([Pour Batter],[Bake Cake])    (place; id: n1)
+  ([Gather Ingredients],[Preheat Oven])    (place; id: n2)
+  ([Cool Cake],[Decorate Cake])    (place; id: n3)
+  ([Choose Flavor - Chocolate],[Pour Batter])    (place; id: n4)
+  ([Bake Cake],[Cool Cake])    (place; id: n5)
+  ([Preheat Oven],[Choose Flavor - Chocolate, Choose Flavor - Vanilla])    (place; id: n6)
+  Start    (place; id: n7)
+  End      (place; id: n8)
+
+Transitions:
+  Bake Cake    (transition; id: n9)
+  Choose Flavor - Chocolate    (transition; id: n10)
+  Choose Flavor - Vanilla    (transition; id: n11)
+  Cool Cake    (transition; id: n12)
+  Decorate Cake    (transition; id: n13)
+  Gather Ingredients    (transition; id: n14)
+  Mix Batter    (transition; id: n15)
+  Pour Batter    (transition; id: n16)
+  Preheat Oven    (transition; id: n17)
+
+ARCS (source -> target)
+-----------------------
+Start -> Gather Ingredients
+Gather Ingredients -> ([Gather Ingredients],[Preheat Oven])
+([Gather Ingredients],[Preheat Oven]) -> Preheat Oven
+([Pour Batter],[Bake Cake]) -> Bake Cake
+([Choose Flavor - Chocolate],[Pour Batter]) -> Pour Batter
+Pour Batter -> ([Pour Batter],[Bake Cake])
+Cool Cake -> ([Cool Cake],[Decorate Cake])
+Decorate Cake -> End
+([Preheat Oven],[Choose Flavor - Chocolate, Choose Flavor - Vanilla]) -> Choose Flavor - Chocolate
+([Cool Cake],[Decorate Cake]) -> Decorate Cake
+Choose Flavor - Chocolate -> ([Choose Flavor - Chocolate],[Pour Batter])
+([Bake Cake],[Cool Cake]) -> Cool Cake
+([Preheat Oven],[Choose Flavor - Chocolate, Choose Flavor - Vanilla]) -> Choose Flavor - Vanilla
+Cool Cake -> End
+Bake Cake -> ([Bake Cake],[Cool Cake])
+Preheat Oven -> ([Preheat Oven],[Choose Flavor - Chocolate, Choose Flavor - Vanilla])
+
+COMPACT CONNECTION LIST
+-----------------------
+([Bake Cake],[Cool Cake]) -> Cool Cake
+([Choose Flavor - Chocolate],[Pour Batter]) -> Pour Batter
+([Cool Cake],[Decorate Cake]) -> Decorate Cake
+([Gather Ingredients],[Preheat Oven]) -> Preheat Oven
+([Pour Batter],[Bake Cake]) -> Bake Cake
+([Preheat Oven],[Choose Flavor - Chocolate, Choose Flavor - Vanilla]) -> Choose Flavor - Chocolate
+([Preheat Oven],[Choose Flavor - Chocolate, Choose Flavor - Vanilla]) -> Choose Flavor - Vanilla
+Bake Cake -> ([Bake Cake],[Cool Cake])
+Choose Flavor - Chocolate -> ([Choose Flavor - Chocolate],[Pour Batter])
+Cool Cake -> ([Cool Cake],[Decorate Cake])
+Cool Cake -> End
+Decorate Cake -> End
+Gather Ingredients -> ([Gather Ingredients],[Preheat Oven])
+Pour Batter -> ([Pour Batter],[Bake Cake])
+Preheat Oven -> ([Preheat Oven],[Choose Flavor - Chocolate, Choose Flavor - Vanilla])
+Start -> Gather Ingredients

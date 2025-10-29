@@ -1,0 +1,41 @@
+NODES
+-----
+Places:
+  ([C],[D])    (place; id: n1)
+  ([B],[D])    (place; id: n2)
+  ([A],[B])    (place; id: n3)
+  ([A],[C])    (place; id: n4)
+  Start    (place; id: n5)
+  End    (place; id: n6)
+
+Transitions:
+  A    (transition; id: n7)
+  B    (transition; id: n8)
+  C    (transition; id: n9)
+  D    (transition; id: n10)
+
+ARCS (source -> target)
+-----------------------
+([A],[C]) -> C
+([C],[D]) -> D
+Start -> A
+D -> End
+A -> ([A],[C])
+([A],[B]) -> B
+C -> ([C],[D])
+B -> ([B],[D])
+([B],[D]) -> D
+A -> ([A],[B])
+
+COMPACT CONNECTION LIST
+-----------------------
+([A],[B]) -> B
+([A],[C]) -> C
+([B],[D]) -> D
+([C],[D]) -> D
+A -> ([A],[B])
+A -> ([A],[C])
+B -> ([B],[D])
+C -> ([C],[D])
+D -> End
+Start -> A

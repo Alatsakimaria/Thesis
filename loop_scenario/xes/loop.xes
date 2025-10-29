@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<log xes.version="1.0" xes.features="nested-attributes"
+     xmlns="http://www.xes-standard.org/">
+  <!-- Extensions -->
+  <extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext"/>
+  <extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext"/>
+  <extension name="Lifecycle" prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext"/>
+
+  <!-- Classifiers -->
+  <classifier name="Activity" keys="concept:name"/>
+  <classifier name="Activity+Lifecycle" keys="concept:name lifecycle:transition"/>
+
+  <!-- Global attributes -->
+  <global scope="trace">
+    <string key="concept:name" value=""/>
+  </global>
+  <global scope="event">
+    <string key="concept:name" value=""/>
+    <string key="lifecycle:transition" value="complete"/>
+    <date key="time:timestamp" value="1970-01-01T00:00:00.000+00:00"/>
+  </global>
+
+  <!-- ===== Loop scenario: A -> (B repeated 0..3 times) -> C ===== -->
+
+  <!-- Case 1: A, B, C -->
+  <trace>
+    <string key="concept:name" value="Case 1"/>
+    <event><string key="concept:name" value="A"/><string key="lifecycle:transition" value="complete"/><date key="time:timestamp" value="2025-01-01T10:00:00.000+00:00"/></event>
+    <event><string key="concept:name" value="B"/><string key="lifecycle:transition" value="complete"/><date key="time:timestamp" value="2025-01-01T10:00:10.000+00:00"/></event>
+    <event><string key="concept:name" value="C"/><string key="lifecycle:transition" value="complete"/><date key="time:timestamp" value="2025-01-01T10:00:20.000+00:00"/></event>
+  </trace>
+
+  <!-- Case 2: A, B, B, C -->
+  <trace>
+    <string key="concept:name" value="Case 2"/>
+    <event><string key="concept:name" value="A"/><string key="lifecycle:transition" value="complete"/><date key="time:timestamp" value="2025-01-01T10:10:00.000+00:00"/></event>
+    <event><string key="concept:name" value="B"/><string key="lifecycle:transition" value="complete"/><date key="time:timestamp" value="2025-01-01T10:10:10.000+00:00"/></event>
+    <event><string key="concept:name" value="B"/><string key="lifecycle:transition" value="complete"/><date key="time:timestamp" value="2025-01-01T10:10:20.000+00:00"/></event>
+    <event><string key="concept:name" value="C"/><string key="lifecycle:transition" value="complete"/><date key="time:timestamp" value="2025-01-01T10:10:30.000+00:00"/></event>
+  </trace>
+
+  <!-- Case 3: A, B, B, B, C -->
+  <trace>
+    <string key="concept:name" value="Case 3"/>
+    <event><string key="concept:name" value="A"/><string key="lifecycle:transition" value="complete"/><date key="time:timestamp" value="2025-01-01T10:20:00.000+00:00"/></event>
+    <event><string key="concept:name" value="B"/><string key="lifecycle:transition" value="complete"/><date key="time:timestamp" value="2025-01-01T10:20:10.000+00:00"/></event>
+    <event><string key="concept:name" value="B"/><string key="lifecycle:transition" value="complete"/><date key="time:timestamp" value="2025-01-01T10:20:20.000+00:00"/></event>
+    <event><string key="concept:name" value="B"/><string key="lifecycle:transition" value="complete"/><date key="time:timestamp" value="2025-01-01T10:20:30.000+00:00"/></event>
+    <event><string key="concept:name" value="C"/><string key="lifecycle:transition" value="complete"/><date key="time:timestamp" value="2025-01-01T10:20:40.000+00:00"/></event>
+  </trace>
+
+  <!-- Case 4: A, C (0 repetitions of B) -->
+  <trace>
+    <string key="concept:name" value="Case 4"/>
+    <event><string key="concept:name" value="A"/><string key="lifecycle:transition" value="complete"/><date key="time:timestamp" value="2025-01-01T10:30:00.000+00:00"/></event>
+    <event><string key="concept:name" value="C"/><string key="lifecycle:transition" value="complete"/><date key="time:timestamp" value="2025-01-01T10:30:10.000+00:00"/></event>
+  </trace>
+</log>

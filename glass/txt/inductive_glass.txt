@@ -1,0 +1,283 @@
+NODES
+-----
+Places:
+  source 125    (place; id: n1)
+  sink 126    (place; id: n2)
+  sink 127    (place; id: n3)
+  sink 128    (place; id: n4)
+  middle 129    (place; id: n5)
+  sink 130    (place; id: n6)
+  sink 131    (place; id: n7)
+  sink 132    (place; id: n8)
+  sink 133    (place; id: n9)
+  sink 134    (place; id: n10)
+  sink 135    (place; id: n11)
+  middle 136    (place; id: n12)
+  sink 137    (place; id: n13)
+  sink 138    (place; id: n14)
+  source 139    (place; id: n15)
+  sink 140    (place; id: n16)
+  source 141    (place; id: n17)
+  sink 142    (place; id: n18)
+  sink 143    (place; id: n19)
+  sink 144    (place; id: n20)
+  sink 145    (place; id: n21)
+  sink 146    (place; id: n22)
+  sink 147    (place; id: n23)
+  sink 148    (place; id: n24)
+  sink 149    (place; id: n25)
+  sink 150    (place; id: n26)
+  sink 151    (place; id: n27)
+  sink 152    (place; id: n28)
+
+Transitions:
+  Getting a blowpipe    (transition; id: n30)
+  nan    (transition; id: n32)
+  Choosing a blowpipe    (transition; id: n34)
+  Gathering glass from the melting furnace    (transition; id: n35)
+  Moving with glass at the end of the blowpipe    (transition; id: n36)
+  Shaping the glass and preparing the mold    (transition; id: n38)
+  Smoothing    (transition; id: n39)
+  Shaping the glass    (transition; id: n41)
+  Instilling a bubble into the glass    (transition; id: n44)
+  Constricting the glass with a jack    (transition; id: n46)
+  Heating the glass in the hot furnace    (transition; id: n48)
+  Soufflé tourné    (transition; id: n49)
+  Constricting, smoothing, choosing a punty, gathering a small quantity, shaping    (transition; id: n51)
+  Preparing for transferring    (transition; id: n52)
+  Heating, choosing a punty, gathering and shaping    (transition; id: n53)
+  Transferring    (transition; id: n55)
+  Heating and passing    (transition; id: n56)
+  Opening the lips and smoothing    (transition; id: n60)
+  Heating the lips    (transition; id: n61)
+  Detaching the object from the blowpipe    (transition; id: n62)
+  Putting the blowpipe away    (transition; id: n63)
+  Making an incision for lips    (transition; id: n65)
+  Heating before opening the lips    (transition; id: n66)
+  Smoothing before opening the lips    (transition; id: n67)
+  Heating after smoothing    (transition; id: n68)
+  Opening the lips    (transition; id: n69)
+  Flashing    (transition; id: n71)
+  Constricting for discarding    (transition; id: n75)
+  Failed Transferring    (transition; id: n76)
+  Invisible1    (logical transition; derived from invisible 'tau from tree'; id: n29)
+  Invisible2    (logical transition; derived from invisible 'tau from tree'; id: n31)
+  Invisible3    (logical transition; derived from invisible 'tau from tree'; id: n33)
+  Invisible4    (logical transition; derived from invisible 'tau from tree'; id: n37)
+  Invisible5    (logical transition; derived from invisible 'tau from tree'; id: n40)
+  Split1    (logical transition; derived from invisible 'tau split'; id: n42)
+  Join1    (logical transition; derived from invisible 'tau join'; id: n43)
+  Invisible8    (logical transition; derived from invisible 'tau from tree'; id: n45)
+  Invisible9    (logical transition; derived from invisible 'tau from tree'; id: n47)
+  Invisible10    (logical transition; derived from invisible 'tau from tree'; id: n50)
+  Invisible11    (logical transition; derived from invisible 'tau from tree'; id: n54)
+  Invisible12    (logical transition; derived from invisible 'tau from tree'; id: n57)
+  Invisible13    (logical transition; derived from invisible 'tau from tree'; id: n58)
+  Invisible14    (logical transition; derived from invisible 'tau from tree'; id: n59)
+  Invisible15    (logical transition; derived from invisible 'tau from tree'; id: n64)
+  Invisible16    (logical transition; derived from invisible 'tau from tree'; id: n70)
+  Invisible17    (logical transition; derived from invisible 'tau from tree'; id: n72)
+  Invisible18    (logical transition; derived from invisible 'tau from tree'; id: n73)
+  Invisible19    (logical transition; derived from invisible 'tau from tree'; id: n74)
+
+ARCS (source -> target)
+-----------------------
+Getting a blowpipe -> sink 127
+Heating and passing -> middle 136
+Invisible13 -> sink 135
+sink 130 -> Heating and passing
+Moving with glass at the end of the blowpipe -> sink 134
+Soufflé tourné -> sink 145
+source 125 -> Getting a blowpipe
+Invisible15 -> sink 146
+sink 138 -> Heating the glass in the hot furnace
+Invisible4 -> sink 130
+Invisible19 -> sink 126
+sink 143 -> Invisible11
+sink 140 -> Join1
+Smoothing before opening the lips -> sink 151
+sink 127 -> Smoothing
+nan -> sink 131
+sink 145 -> Constricting, smoothing, choosing a punty, gathering a small quantity, shaping
+Opening the lips and smoothing -> sink 147
+sink 147 -> Heating the lips
+sink 152 -> Flashing
+sink 149 -> Invisible15
+Gathering glass from the melting furnace -> sink 133
+Smoothing -> sink 130
+sink 145 -> Preparing for transferring
+sink 144 -> Soufflé tourné
+Flashing -> middle 129
+sink 130 -> Shaping the glass
+sink 134 -> Invisible4
+sink 131 -> Choosing a blowpipe
+Constricting the glass with a jack -> sink 142
+Split1 -> source 139
+sink 143 -> Transferring
+sink 135 -> Invisible14
+sink 132 -> Gathering glass from the melting furnace
+sink 151 -> Heating after smoothing
+sink 134 -> Shaping the glass and preparing the mold
+sink 128 -> Invisible19
+Heating after smoothing -> sink 146
+sink 138 -> Heating, choosing a punty, gathering and shaping
+sink 150 -> Heating before opening the lips
+source 141 -> Constricting the glass with a jack
+sink 135 -> Detaching the object from the blowpipe
+sink 130 -> Invisible5
+Shaping the glass and preparing the mold -> sink 130
+sink 145 -> Invisible10
+sink 133 -> Moving with glass at the end of the blowpipe
+Constricting, smoothing, choosing a punty, gathering a small quantity, shaping -> sink 143
+Invisible14 -> middle 129
+Invisible11 -> middle 136
+Constricting for discarding -> sink 126
+Invisible16 -> middle 129
+Invisible12 -> sink 130
+sink 149 -> Making an incision for lips
+source 139 -> Instilling a bubble into the glass
+Opening the lips -> sink 152
+Invisible5 -> sink 137
+source 125 -> Invisible1
+sink 149 -> Smoothing before opening the lips
+Heating the lips -> sink 146
+sink 146 -> Opening the lips
+Invisible17 -> sink 127
+Putting the blowpipe away -> sink 149
+Split1 -> source 141
+Preparing for transferring -> sink 143
+Invisible3 -> sink 132
+middle 136 -> Invisible13
+middle 129 -> Invisible18
+sink 127 -> Invisible2
+source 141 -> Invisible8
+Heating the glass in the hot furnace -> sink 144
+Heating, choosing a punty, gathering and shaping -> sink 143
+sink 152 -> Invisible16
+Invisible1 -> sink 127
+sink 128 -> Constricting for discarding
+sink 148 -> Putting the blowpipe away
+Transferring -> middle 136
+Detaching the object from the blowpipe -> sink 148
+sink 137 -> Split1
+Invisible18 -> sink 128
+sink 131 -> Invisible3
+Invisible10 -> sink 143
+sink 127 -> nan
+Choosing a blowpipe -> sink 132
+Join1 -> sink 138
+middle 136 -> Invisible12
+Invisible9 -> sink 144
+Heating before opening the lips -> sink 146
+Making an incision for lips -> sink 150
+sink 135 -> Opening the lips and smoothing
+Invisible8 -> sink 142
+middle 129 -> Invisible17
+Shaping the glass -> sink 137
+Failed Transferring -> sink 126
+Invisible2 -> sink 131
+sink 142 -> Join1
+Instilling a bubble into the glass -> sink 140
+sink 128 -> Failed Transferring
+sink 138 -> Invisible9
+
+COMPACT CONNECTION LIST
+-----------------------
+Choosing a blowpipe -> sink 132
+Constricting for discarding -> sink 126
+Constricting the glass with a jack -> sink 142
+Constricting, smoothing, choosing a punty, gathering a small quantity, shaping -> sink 143
+Detaching the object from the blowpipe -> sink 148
+Failed Transferring -> sink 126
+Flashing -> middle 129
+Gathering glass from the melting furnace -> sink 133
+Getting a blowpipe -> sink 127
+Heating after smoothing -> sink 146
+Heating and passing -> middle 136
+Heating before opening the lips -> sink 146
+Heating the glass in the hot furnace -> sink 144
+Heating the lips -> sink 146
+Heating, choosing a punty, gathering and shaping -> sink 143
+Instilling a bubble into the glass -> sink 140
+Invisible1 -> sink 127
+Invisible10 -> sink 143
+Invisible11 -> middle 136
+Invisible12 -> sink 130
+Invisible13 -> sink 135
+Invisible14 -> middle 129
+Invisible15 -> sink 146
+Invisible16 -> middle 129
+Invisible17 -> sink 127
+Invisible18 -> sink 128
+Invisible19 -> sink 126
+Invisible2 -> sink 131
+Invisible3 -> sink 132
+Invisible4 -> sink 130
+Invisible5 -> sink 137
+Invisible8 -> sink 142
+Invisible9 -> sink 144
+Join1 -> sink 138
+Making an incision for lips -> sink 150
+Moving with glass at the end of the blowpipe -> sink 134
+Opening the lips -> sink 152
+Opening the lips and smoothing -> sink 147
+Preparing for transferring -> sink 143
+Putting the blowpipe away -> sink 149
+Shaping the glass -> sink 137
+Shaping the glass and preparing the mold -> sink 130
+Smoothing -> sink 130
+Smoothing before opening the lips -> sink 151
+Soufflé tourné -> sink 145
+Split1 -> source 139
+Split1 -> source 141
+Transferring -> middle 136
+middle 129 -> Invisible17
+middle 129 -> Invisible18
+middle 136 -> Invisible12
+middle 136 -> Invisible13
+nan -> sink 131
+sink 127 -> Invisible2
+sink 127 -> Smoothing
+sink 127 -> nan
+sink 128 -> Constricting for discarding
+sink 128 -> Failed Transferring
+sink 128 -> Invisible19
+sink 130 -> Heating and passing
+sink 130 -> Invisible5
+sink 130 -> Shaping the glass
+sink 131 -> Choosing a blowpipe
+sink 131 -> Invisible3
+sink 132 -> Gathering glass from the melting furnace
+sink 133 -> Moving with glass at the end of the blowpipe
+sink 134 -> Invisible4
+sink 134 -> Shaping the glass and preparing the mold
+sink 135 -> Detaching the object from the blowpipe
+sink 135 -> Invisible14
+sink 135 -> Opening the lips and smoothing
+sink 137 -> Split1
+sink 138 -> Heating the glass in the hot furnace
+sink 138 -> Heating, choosing a punty, gathering and shaping
+sink 138 -> Invisible9
+sink 140 -> Join1
+sink 142 -> Join1
+sink 143 -> Invisible11
+sink 143 -> Transferring
+sink 144 -> Soufflé tourné
+sink 145 -> Constricting, smoothing, choosing a punty, gathering a small quantity, shaping
+sink 145 -> Invisible10
+sink 145 -> Preparing for transferring
+sink 146 -> Opening the lips
+sink 147 -> Heating the lips
+sink 148 -> Putting the blowpipe away
+sink 149 -> Invisible15
+sink 149 -> Making an incision for lips
+sink 149 -> Smoothing before opening the lips
+sink 150 -> Heating before opening the lips
+sink 151 -> Heating after smoothing
+sink 152 -> Flashing
+sink 152 -> Invisible16
+source 125 -> Getting a blowpipe
+source 125 -> Invisible1
+source 139 -> Instilling a bubble into the glass
+source 141 -> Constricting the glass with a jack
+source 141 -> Invisible8

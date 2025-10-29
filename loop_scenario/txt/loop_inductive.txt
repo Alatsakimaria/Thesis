@@ -1,0 +1,40 @@
+NODES
+-----
+Places:
+  P1    (place; id: )
+  P2    (place; original name: source 5; id: n1)
+  P3    (place; original name: sink 6; id: n2)
+  P4    (place; original name: sink 7; id: n3)
+  P5    (place; original name: sink 8; id: n4)
+
+Transitions:
+  A    (transition; id: n5)
+  T1    (transition; original name: tau from tree; id: n6)
+  B    (transition; id: n7)
+  C    (transition; id: n8)
+
+ARCS (source -> target)
+-----------------------
+A -> P4
+B -> P5
+C -> P3
+P2 -> A
+P4 -> B
+P4 -> T1
+P5 -> C
+T1 -> P5
+
+UNCONNECTED NODES
+-----------------
+P1 (place)
+
+COMPACT CONNECTION LIST
+-----------------------
+A -> P4
+B -> P5
+C -> P3
+P2 -> A
+P4 -> B
+P4 -> T1
+P5 -> C
+T1 -> P5
